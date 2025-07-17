@@ -38,12 +38,18 @@ if ! command -v htpasswd &> /dev/null; then
     fi
 fi
 
-# Write or append user
-if [[ -f "$OUTPUT_FILE" ]] && grep -q "^${REGISTRY_USERNAME}:" "$OUTPUT_FILE"; then
-    echo "User $REGISTRY_USERNAME already exists."
+# Create or update user in htpasswd file
+if [[ -f "$OUTPUT_FILE" ]]; then
+    if grep -q "^${REGISTRY_USERNAME}:" "$OUTPUT_FILE"; then
+        echo "User $REGISTRY_USERNAME already exists in $OUTPUT_FILE"
+        exit 0
+    else
+        echo "Adding user $REGISTRY_USERNAME to existing htpasswd file..."
+        htpasswd -Bb "$OUTPUT_FILE" "$REGISTRY_USERNAME" "$REGISTRY_PASSWORD"
+    fi
 else
-    echo "Creating/updating user $REGISTRY_USERNAME in htpasswd."
-    htpasswd -Bb "$OUTPUT_FILE" "$REGISTRY_USERNAME" "$REGISTRY_PASSWORD"
+    echo "Creating new htpasswd file for user $REGISTRY_USERNAME..."
+    htpasswd -Bbn "$REGISTRY_USERNAME" "$REGISTRY_PASSWORD" > "$OUTPUT_FILE"
 fi
 
 echo "✅ htpasswd setup complete at $OUTPUT_FILE"
