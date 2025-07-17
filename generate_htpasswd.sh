@@ -11,8 +11,8 @@ set -a
 source .env
 set +a
 
-AUTH_DIR="${REGISTRY_DATA_VOLUME}/data/registry/auth"
-DATA_DIR="${REGISTRY_DATA_VOLUME}/data/data"
+AUTH_DIR="${REGISTRY_DATA_VOLUME}/registry/auth"
+DATA_DIR="${REGISTRY_DATA_VOLUME}/data/"
 OUTPUT_FILE="${AUTH_DIR}/htpasswd"
 
 mkdir -p "$AUTH_DIR" "$DATA_DIR"
