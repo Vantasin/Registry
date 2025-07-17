@@ -92,7 +92,7 @@ tank/
 5. **Start registry**
 
    ```bash
-   docker compose up -d
+   sudo docker compose up -d
    ```
 
 ---
