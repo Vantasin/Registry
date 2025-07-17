@@ -159,7 +159,7 @@ Once tagged image has been pushed:
 
 
 ```bash
-curl -u USERNAME https://registry.example.com/v2/_catalog
+curl -u `USERNAME` https://`registry.example.com`/v2/_catalog
 ```
 > **Replace:** `USERNAME` with your registry credentials from htpasswd & `registry.example.com` with your domain from Nginx Proxy Manager
 
