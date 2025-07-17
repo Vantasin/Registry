@@ -98,14 +98,14 @@ tank/
 ---
 ## Push Images to Registry
 
-To push Docker images to your **self-hosted Docker Registry** (using **HTTP Basic Auth** via `htpasswd`) and **Nginx Proxy Manager** (NPM) for reverse proxy, you need to follow these steps:
+To push Docker images to your **Docker Registry**, you need to follow these steps:
 
 ---
 
 ### 🧭 Overview
 
 * You have a local Docker registry container listening on `localhost:5000`
-* It's exposed externally as `https://registry.example.com` via NPM
+* It's exposed externally as `https://registry.example.com` via Nginx Proxy Manager (NPM)
 * You’ve added Basic Auth using `htpasswd`
 * You want to `docker push` images to it
 
@@ -176,9 +176,8 @@ Make sure your NPM proxy host is configured like this:
 
 Ensure:
 
-* `registry.example.com` resolves to your public IP or Tailscale IP (if using Tailscale Serve)
+* `registry.example.com` resolves to your public IP or Tailscale IP
 * You have a **valid TLS certificate** via NPM (Let's Encrypt)
-* Your Docker client trusts the certificate (Docker on Linux/macOS typically handles this fine)
 
 ---
 
