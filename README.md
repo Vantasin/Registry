@@ -54,7 +54,7 @@ tank/
    git clone https://github.com/Vantasin/Registry.git .
    ```
 
-2. **Create the runtime data directory** (optional)
+2. **Create the runtime data directory**
 
    If using ZFS:
    ```bash
