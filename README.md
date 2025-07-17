@@ -153,7 +153,7 @@ docker push registry.example.com/my-image:latest
 
 ---
 
-### 4. List All Repositories (Image Names)
+### ✅ 4. 📦 List All Images
 
 Once tagged image has been pushed:
 
@@ -161,11 +161,7 @@ Once tagged image has been pushed:
 ```bash
 curl -u USERNAME https://registry.example.com/v2/_catalog
 ```
-> Replace:
-  
-  - USERNAME with your registry credentials (from htpasswd)
-  
-  - registry.example.com with your domain (e.g. via Nginx Proxy Manager)
+> **Replace:** `USERNAME` with your registry credentials from htpasswd & `registry.example.com` with your domain from Nginx Proxy Manager
 
 ---
 
