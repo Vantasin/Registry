@@ -85,8 +85,8 @@ tank/
    Run the script:
 
    ```bash
-   chmod +x generate_htpasswd.sh
-   ./generate_htpasswd.sh
+   sudo chmod +x generate_htpasswd.sh
+   sudo ./generate_htpasswd.sh
    ```
 
 5. **Start registry**
