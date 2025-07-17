@@ -153,7 +153,23 @@ docker push registry.example.com/my-image:latest
 
 ---
 
-### ✅ 4. ⚙️ Nginx Proxy Manager Configuration
+### 4. List All Repositories (Image Names)
+
+Once tagged image has been pushed:
+
+
+```bash
+curl -u USERNAME https://registry.example.com/v2/_catalog
+```
+> Replace:
+  
+  - USERNAME with your registry credentials (from htpasswd)
+  
+  - registry.example.com with your domain (e.g. via Nginx Proxy Manager)
+
+---
+
+### ✅ 5. ⚙️ Nginx Proxy Manager Configuration
 
 Make sure your NPM proxy host is configured like this:
 
@@ -172,7 +188,7 @@ Make sure your NPM proxy host is configured like this:
 
 ---
 
-### ✅ 5. 🔒 DNS + HTTPS Requirements
+### ✅ 6. 🔒 DNS + HTTPS Requirements
 
 Ensure:
 
@@ -192,6 +208,9 @@ docker login registry.example.com
 
 # 3. Push the image
 docker push registry.example.com/test/alpine:latest
+
+# 4. List All Images
+curl -u USERNAME https://registry.example.com/v2/_catalog
 ```
 
 ---
