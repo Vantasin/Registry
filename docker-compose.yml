@@ -12,7 +12,6 @@ services:
       REGISTRY_AUTH_HTPASSWD_REALM: "Registry Realm"
       REGISTRY_AUTH_HTPASSWD_PATH: "/auth/htpasswd"
       REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY: /data
-      REGISTRY_TRACING_ENABLED: "false"  # disable OpenTelemetry trace export
     volumes:
       - ${REGISTRY_DATA_VOLUME}/data:/data
       - ${REGISTRY_DATA_VOLUME}/registry/auth:/auth
