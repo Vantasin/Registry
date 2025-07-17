@@ -1,0 +1,17 @@
+---
+services:
+  registry:
+    image: registry:latest
+    container_name: registry
+    restart: unless-stopped
+    ports:
+      - "${REGISTRY_PORT}:5000"
+    environment:
+      REGISTRY_HTTP_ADDR: "0.0.0.0:${REGISTRY_PORT}"
+      REGISTRY_AUTH: htpasswd
+      REGISTRY_AUTH_HTPASSWD_REALM: "Registry Realm"
+      REGISTRY_AUTH_HTPASSWD_PATH: "/auth/htpasswd"
+      REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY: /data
+    volumes:
+      - ${REGISTRY_DATA_VOLUME}/data:/data
+      - ${REGISTRY_DATA_VOLUME}/registry/auth:/auth
