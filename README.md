@@ -1,7 +1,7 @@
 # 📦 Registry Docker Compose Stack
 
 [![MIT License](https://img.shields.io/github/license/Vantasin/Registry?style=flat-square)](LICENSE)
-[![Docker Registry](https://img.shields.io/badge/Docker%20Registry-Self--Hosted-blue?logo=docker&style=flat-square)](https://registry.example.com)
+[![Docker Registry](https://img.shields.io/badge/Docker%20Registry-Self--Hosted-blue?logo=docker&style=flat-square)](https://hub.docker.com/_/registry)
 [![ZFS](https://img.shields.io/badge/ZFS-OpenZFS-blue?style=flat-square)](https://openzfs.org/)
 
 🐳 Docker Registry — A self-hosted Docker image storage service for managing, storing, and distributing container images across your infrastructure. Useful for CI/CD pipelines, local development, and version-controlled container deployments.
