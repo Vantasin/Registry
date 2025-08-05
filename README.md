@@ -76,9 +76,20 @@ tank/
    sudo chmod 600 .env
    ```
 
-   > **Note:** Be sure to update the `REGISTRY_USERNAME` & `REGISTRY_PASSWORD`, they are your login credentials. If necessary you can also update the `REGISTRY_DATA_VOLUME` & `REGISTRY_PORT`.
+   > **Note:** Be sure to update the `REGISTRY_USERNAME` & `REGISTRY_PASSWORD`, they are your login credentials. If necessary you can also update the `REGISTRY_DATA_VOLUME`.
 
    > **Note:** In order to remotely use the Docker Registry we need a trusted certificate from a certificate authority. Be sure to create the **Proxy Host** eg. `registry.example.com` using [Nginx Proxy Manager](https://github.com/Vantasin/Nginx-Proxy-Manager.git) as a reverse proxy for HTTPS certificates via Let's Encrypt.
+   >
+   > **Proxy Host:**
+   >  - **Domain Name:** `https://registry.example.com`
+   >  - **Scheme:** `http`
+   >  - **Forward Hostname/IP:** `registry`
+   >  - **Forward Port:** `5000`
+   >
+   > **SSL:**
+   >  - Check **Enable SSL**
+   >  - From the **Certificate** dropdown select your `*.example.duckdns.org` certificate
+   >  - Enable **Force SSL** to redirect all HTTP → HTTPS
 
 4. **Setup basic authentication**
 
