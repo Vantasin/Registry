@@ -183,7 +183,7 @@ Make sure your NPM proxy host is configured like this:
 | Setting                   | Value                                                               |
 | ------------------------- | ------------------------------------------------------------------- |
 | **Domain Name**           | `registry.example.com`                                              |
-| **Forward Hostname/IP**   | `registry`)                                                         |
+| **Forward Hostname/IP**   | `registry`                                                          |
 | **Forward Port**          | `5000`                                                              |
 | **Scheme**                | `http`                                                              |
 | **Enable SSL**            | ✅ Yes (via Let's Encrypt)                                          |
