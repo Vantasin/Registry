@@ -88,7 +88,7 @@ tank/
    >
    > **SSL:**
    >  - Check **Enable SSL**
-   >  - From the **Certificate** dropdown select your `*.example.duckdns.org` certificate
+   >  - From the **Certificate** dropdown select your `*.example.com` certificate
    >  - Enable **Force SSL** to redirect all HTTP → HTTPS
 
 4. **Setup basic authentication**
