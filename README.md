@@ -183,12 +183,12 @@ Make sure your NPM proxy host is configured like this:
 | Setting                   | Value                                                               |
 | ------------------------- | ------------------------------------------------------------------- |
 | **Domain Name**           | `registry.example.com`                                              |
-| **Forward Hostname/IP**   | `localhost` (or container hostname like `registry`)                 |
+| **Forward Hostname/IP**   | `registry`)                                                         |
 | **Forward Port**          | `5000`                                                              |
 | **Scheme**                | `http`                                                              |
-| **Enable SSL**            | ✅ Yes (via Let's Encrypt)                                           |
-| **Block Common Exploits** | ✅ Yes                                                               |
-| **Websockets Support**    | ✅ Recommended                                                       |
+| **Enable SSL**            | ✅ Yes (via Let's Encrypt)                                          |
+| **Block Common Exploits** | ✅ Yes                                                              |
+| **Websockets Support**    | ✅ Recommended                                                      |
 | **Access List/Auth**      | **Disabled** (because you're using `htpasswd` inside the container) |
 
 > ⚠️ If you add auth in NPM **and** inside the registry container, you may get **double prompts or errors.** Only use `htpasswd` **inside** the container, not NPM’s access list.
